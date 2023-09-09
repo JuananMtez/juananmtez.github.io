@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <!-- MENU ENCABEZADO -->
+    <div class="contenedor-header">
+        <header>
+            <div class="logo">
+                <a href="#">Juan Antonio</a>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">Home</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">About me</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">Skills</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">Curriculum</a></li>
+                    <li><a href="#portfolio" onclick="seleccionar()">Portfolio</a></li>
+                    <li><a href="#certificacion" onclick="seleccionar()">Certifications</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+
+    <!-- SECCION INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="img/Gente46-modified (1).png" alt="">
+            </div>
+            <h1>Juan Antonio Martínez López</h1>
+            <h2>Software Engineer - Backend Developer</h2>
+            <div class="redes">               
+                <a href="https://www.linkedin.com/in/juanantonio-martinez/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/JuananMtez" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://stackoverflow.com/users/19906802/juan-antonio-martinez-lopez" target="_blank"><i class="fa-brands fa-stack-overflow"></i></a>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>About me</h2>
+            <p><span>Welcome, I am Juan Antonio Martínez López.</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam unde soluta minima necessitatibus, voluptas consectetur vero officiis quas, explicabo deleniti repellendus aliquid debitis maiores numquam voluptate reprehenderit in delectus dolores.</p>
+
+            <div class="fila">
+                <!-- datos personales -->
+                <div class="col">
+                    <h3>Personal data</h3>
+                    <ul>
+                        <li>
+                            <strong>Name</strong>
+                            Juan Antonio Martínez López
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            martinezlopezjuanantonio@gmail.com
+                        </li>
+                        <li>
+                            <strong>From</strong>
+                            Murcia, Spain
+                        </li>
+                        <li>
+                            <strong>Lives in</strong>
+                            Murcia, Spain
+                        </li>
+                        <li>
+                            <strong>Age</strong>
+                            25
+                        </li>
+                        <li>
+                            <strong>Languages</strong>
+                            Spanish (native), English (B2)
+                        </li>
+  
+                    </ul>
+                </div>
+
+                <!-- intereses -->
+                <div class="col">
+                    <h3>What can I do?</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-server"></i>
+                            <span>Backend developer</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-desktop"></i>
+                            <span>Frontend developer</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-desktop"></i>
+                            <span>Desktop developer</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-mobile"></i>
+                            <span>Android developer</span>
+                        </div>
+                        
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            <a href="curriculum.pdf" download>
+                <button>
+                  Download CV <i class="fa-solid fa-download"></i>
+                  <span class="overlay"></span>
+                </button>
+              </a>
+        </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>Skills</h2>
+            <div class="fila">
+                <!-- Technical Skill -->
+                <div class="col">
+                    <h3>Programming languages</h3>
+                    <div class="skill">
+                        <span>Javascript</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>HTML & CSS</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Node.js</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Java</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Python</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>MySQL</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Technical Skill -->
+                <div class="col">
+                    <h3>Frameworks</h3>
+                    <div class="skill">
+                        <span>React.js</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Angular</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Electron.js</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>FastAPI</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>95%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Spring Boot</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>70%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Professional Skills -->
+                <div class="col">
+                    <h3>Soft Skills</h3>
+                    <div class="skill">
+                        <span>Comunication</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Workteam</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>100%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Dedication</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>100%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Adaptability</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>100%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Time management</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Problem solving</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION CURRICULUM -->
+    <section id="curriculum" class="curriculum">
+        <div class="contenido-seccion">
+            <h2>Curriculum</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Education</h3>
+                    <div class="item izq">
+                        <h4>Master of Engineering in New Technologies in Computer Sciences</h4>
+                        <span class="casa">Universidad de Murcia</span>
+                        <span class="fecha">2022 - Current</span>
+                        <p>I pursued my Master's degree in New Technologies with a focus on Software Technologies at the University of Murcia. This specialized program delved into advanced topics in software development, emphasizing cutting-edge technologies and methodologies.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Ingineering Degree in Computer Science</h4>
+                        <span class="casa">Universidad de Murcia</span>
+                        <span class="fecha">2016 - 2022</span>
+                        <p>I completed my Bachelor's degree in Computer Engineering at the University of Murcia. This comprehensive program provided me with a strong foundation in computer science, software development, and various key areas of technology. It equipped me with the essential skills needed to embark on a successful career in the field.</p>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="col derecha">
+                    <h3>Work experience</h3>
+                    <div class="item der">
+                        <h4>Lead investigator in Valkyries H2020</h4>
+                        <span class="casa">Universidad de Murcia</span>
+                        <span class="fecha">2022 - 2023</span>
+                        <p>I was part of the <a href="https://www.valkyries-h2020.eu/" target="_blank">VALKYRIES-H2020 project</a>, a pioneering initiative that emerged in response to the growing challenges posed by the increasing frequency and severity of natural disasters. Recognizing the imperative to enhance the resilience of infrastructure, ecosystems, and society within the European Union (EU), this project was conceived as a significant step in the realm of disaster risk management.<br/><br/>
+
+                            I represented the University of Murcia as a partner in this project, actively participating in various Work Packages and even assuming a leadership role in one of them. Additionally, I took charge of leading various tasks within each Work Package.<br/><br/>
+                            </p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>CyberDataLab Member</h4>
+                        <span class="casa">Universidad de Murcia</span>
+                        <span class="fecha">2022 - 2023</span>
+                        <p>I had the privilege of being part of <a href="https://cyberdatalab.um.es/" target="_blank">CyberDataLab</a>, a dynamic and highly motivated team of scientists and researchers dedicated to advancing the realms of cybersecurity and data science.<br/><br/>
+
+                            As part of my Bachelor's thesis, I was involved in centered around the development of a comprehensive framework for studying non-invasive Brain-Computer Interfaces (BCIs). It enabled researchers to conduct various phases of BCI research efficiently, from data collection to analysis.<br/><br/>
+                            
+                            For my Master's thesis, I was working on a project focused on the development of a framework for malware detection and classification in IoT devices. The framework was designed to generate sophisticated models capable of identifying and categorizing malware, as well as, making real-time predictions using these models.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Full-stack Developer</h4>
+                        <span class="casa">Metaenlace</span>
+                        <span class="fecha">2021 - 2022</span>
+                        <p> I contributed to various critical projects for the Servicio Murciano de Salud (SMS). My role involved not only application development but also the management of project deployments, ensuring seamless updates using Jenkins automation.<br/><br/>
+
+                            Most of the projects I worked on featured a robust backend architecture built on the Spring framework, while the frontend was developed using Java Server Faces and PrimeFaces, reflecting my proficiency in Java-based technologies. Additionally, I consistently utilized Oracle SQL as the database management system (DBMS) for these projects.<br/><br/>
+                            
+                            This role allowed me to strengthen my expertise in full-stack development, project management, and deployment automation while making a meaningful impact on healthcare solutions</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Internship as Full-stack Developer</h4>
+                        <span class="casa">Metaenlace</span>
+                        <span class="fecha">2021 - 2021</span>
+                        <p>
+                            I had the opportunity to engage in an enriching internship experience where I actively contributed to the development of a web-based medical appointment scheduling application.<br/><br/>
+                            This project featured a robust backend implemented with Spring Boot and a parallel implementation using .NET 5, showcasing my versatility in multiple technology stacks.<br/><br/>
+
+On the frontend, I leveraged the Angular framework to craft an elegant and user-friendly interface. This experience allowed me to gain hands-on experience in both backend and frontend technologies, enhancing my skills and proficiency in full-stack development<br/><br/>
+                        </p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCION PORTFOLIO -->
+    <section id="portfolio" class="portfolio">
+        <div class="contenido-seccion">
+            <h2>PORTFOLIO</h2>
+            <div class="galeria">
+                <div class="proyecto">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/bRqbHpXklPU?si=RB1L6SWe8Os71y-z&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+                <div class="proyecto">
+                    <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                    <div class="overlay">
+                        <h3>Diseño Creativo</h3>
+                        <p>Fotografía</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--SECCION CERTIFICACIONES-->
+    <section id="certificacion" class="certificacion">
+        <div class="contenido-seccion">
+            <h2>Certifications</h2>
+            <div class="galeria">
+                <div class="proyecto">
+                    
+                    <img src="img/umu.jpg" alt="">
+                    <div class="overlay">
+                        <h3>German Course A1.1</h3>
+                        <p><a href="https://drive.google.com/file/d/1LPrSLD-vWOU7LvsMqyySKsWNQIVE-aub/view" target="_blank">Show credentials <i class="fa fa-link" aria-hidden="true"></i>
+                        </a></p>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- SECCION CONTACTO -->
+    <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+            <h2>CONTACTO</h2>
+            <div class="fila">
+                <!-- Formulario -->
+                <div class="col">
+                    <input type="text" id="name" placeholder="Your name">
+                    <input type="text" id="phone" placeholder="Phone number">
+                    <input type="text" id="email" placeholder="Email">
+                    
+                    <textarea id="message" cols="30" rows="10" placeholder="Message"></textarea>
+                    <button  type="button" onclick="sendEmail()">
+                        Send <i class="fa-solid fa-paper-plane"></i>
+                        <span class="overlay"></span>
+                    </button>
+                </div>
+                <!-- Mapa -->
+                <div class="col">
+                    <img style="border-radius: 28px;" src="img/ubicacion.png" alt="">
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-location-dot"></i>
+                                Murcia, Spain
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-mobile-screen"></i>
+                                Call me: +34 679 065 766
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                Email: martinezlopezjuanantonio@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+        <a href="#inicio" class="arriba">
+            <i class="fa-solid fa-angles-up"></i>
+        </a>
+        <div class="redes">
+            <a href="https://www.linkedin.com/in/juanantonio-martinez/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/JuananMtez" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://stackoverflow.com/users/19906802/juan-antonio-martinez-lopez" target="_blank"><i class="fa-brands fa-stack-overflow"></i></a>
+
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</body>
+</html>
