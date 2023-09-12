@@ -629,8 +629,10 @@ a {
 .portfolio .galeria .proyecto .overlay p{ 
     color: white;
     display: block;
-    width: 250px;
+    
     height: auto;
+    margin: 0;
+    padding: 0;
     
     white-space: normal; 
 }
@@ -881,7 +883,6 @@ footer .arriba{
     }
 
 }
-
 
 
 

@@ -84,3 +84,4 @@ function sendEmail() {
         // Puedes agregar aquí código para manejar errores
     });
 }
+
