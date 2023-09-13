@@ -795,10 +795,15 @@ footer .redes a{
     width: 42px;
     height: 42px;
     line-height: 42px;
-    margin: 40px 5px;
+    
     font-size: 20px;
     transition: .3s;
 }
+
+footer p{
+    color:#8f8e8d73
+}
+
 footer .arriba{
     display: block;
     width: 50px;
