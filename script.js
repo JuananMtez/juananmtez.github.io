@@ -28,21 +28,23 @@ function efectoHabilidades(){
         habilidades[2].classList.add("nodejs");
         habilidades[3].classList.add("java");
         habilidades[4].classList.add("python");
-        habilidades[5].classList.add("mysql");
+        habilidades[5].classList.add("kotlin");
+        habilidades[6].classList.add("mysql");
 
 
-        habilidades[6].classList.add("reactjs");
-        habilidades[7].classList.add("angular");
-        habilidades[8].classList.add("electrojs");
-        habilidades[9].classList.add("fastapi");
-        habilidades[10].classList.add("springboot");
+        habilidades[7].classList.add("reactjs");
+        habilidades[8].classList.add("angular");
+        habilidades[9].classList.add("electrojs");
+        habilidades[10].classList.add("fastapi");
+        habilidades[11].classList.add("springboot");
+        habilidades[12].classList.add("micronaut");
 
-        habilidades[11].classList.add("comunication");
-        habilidades[12].classList.add("workteam");
-        habilidades[13].classList.add("dedicacion");
-        habilidades[14].classList.add("adaptabilidad");
-        habilidades[15].classList.add("time")
-        habilidades[16].classList.add("solving")
+        habilidades[13].classList.add("comunication");
+        habilidades[14].classList.add("workteam");
+        habilidades[15].classList.add("dedicacion");
+        habilidades[16].classList.add("adaptabilidad");
+        habilidades[17].classList.add("time")
+        habilidades[18].classList.add("solving")
         
 
 

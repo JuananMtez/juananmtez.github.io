@@ -319,6 +319,16 @@ a {
     100%{width: 80%;}
 }
 
+.skills .skill .kotlin{
+    width: 0%;
+    animation: 2s kotlin forwards;
+}
+
+@keyframes kotlin {
+    0%{width: 0%;}
+    100%{width: 80%;}
+}
+
 .skills .skill .mysql{
     width: 0%;
     animation: 2s mysql forwards;
@@ -386,6 +396,16 @@ a {
     0%{width: 0%;}
     100%{width: 70%;}
 }
+
+.skills .skill .micronaut{
+    width: 0%;
+    animation: 2s micronaut forwards;
+}
+@keyframes micronaut {
+    0%{width: 0%;}
+    100%{width: 90%;}
+}
+
 
 .skills .skill .comunication{
     width: 0%;
