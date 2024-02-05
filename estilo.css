@@ -247,11 +247,13 @@ a {
     font-size: 28px;
     font-family: 'Helvetica';
     margin-bottom: 25px;
+    color: #1CB698;
 }
 .skills .skill > span{
     font-weight: bold;
     display: block;
     margin-bottom: 10px;
+    font-size: 18px;
 }
 .skills .skill .barra-skill{
     height: 8px;
