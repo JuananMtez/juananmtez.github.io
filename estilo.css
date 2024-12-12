@@ -693,7 +693,7 @@ a {
 .publicacion .galeria .proyecto img{
     width: 100%;
     display: block;
-    height: 250px;
+    height: 300px;
     border-radius: 28px;
     margin-bottom: 10px;
 }
