@@ -29,7 +29,7 @@ a {
     z-index: 99;
 }
 .contenedor-header header{
-    max-width: 1100px;
+
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -659,10 +659,63 @@ a {
     white-space: normal; 
 }
 
-/* SECCION CERTIFICACION */
+/* SECCION PUBLICACIONES */
 
-.certificacion{
+.publicacion{
     background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+.publicacion .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.publicacion h2{
+    font-size: 48px;
+    font-family: 'Helvetica';
+    text-align: center;
+    padding: 20px 0;
+
+}
+
+.publicacion .galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.publicacion .galeria .proyecto{
+    position: relative;
+    max-width: 340px;
+    height: fit-content;
+    margin: 10px;
+    border-radius: 28px;
+}
+.publicacion .galeria .proyecto img{
+    width: 100%;
+    display: block;
+    height: 250px;
+    border-radius: 28px;
+    margin-bottom: 10px;
+}
+
+.publicacion .galeria .proyecto .overlay h3{ 
+    color: white;
+}
+
+.publicacion .galeria .proyecto .overlay p{ 
+    color: white;
+    display: block;
+    width: 100%;
+    height: auto;
+    word-break: break-all;
+    word-wrap: break-word;
+    white-space: normal; 
+}
+
+
+/* SECCION CERTIFICACIONES */
+.certificacion{
+    background-color: #252A2E;
     color: #fff;
     padding: 50px 20px;
 }
@@ -693,9 +746,24 @@ a {
 .certificacion .galeria .proyecto img{
     width: 100%;
     display: block;
-    height: 250px;
+    border-radius: 28px;
+
+}
+.certificacion .galeria .proyecto iframe{
+    width: 100%;
+    height: 300px;
+    display: block;
     border-radius: 28px;
     margin-bottom: 10px;
+}
+
+.certificacion .galeria .proyecto img{
+    width: 100%;
+    height: 300px;
+    display: block;
+    border-radius: 28px;
+    margin-bottom: 10px;
+
 }
 
 .certificacion .galeria .proyecto .overlay h3{ 
@@ -705,12 +773,15 @@ a {
 .certificacion .galeria .proyecto .overlay p{ 
     color: white;
     display: block;
-    width: 100%;
+    
     height: auto;
-    word-break: break-all;
-    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+    
     white-space: normal; 
 }
+
+
 
 
 /* SECCION CONTACTO */
@@ -842,7 +913,7 @@ footer .arriba{
     font-size: 18px;
 }
 /* SECCION RESPONSIVE */
-@media screen and (max-width:980px){
+@media screen and (max-width:1120px){
     nav{
         display: none;
     }
