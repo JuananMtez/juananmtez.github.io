@@ -622,7 +622,7 @@ a {
     border-radius: 28px;
 }
 .portfolio .galeria .proyecto img{
-    width: 100%;
+    width: 300px;
     display: block;
     border-radius: 28px;
 
@@ -636,7 +636,7 @@ a {
 }
 
 .portfolio .galeria .proyecto img{
-    width: 100%;
+    width: 300px;
     height: 300px;
     display: block;
     border-radius: 28px;
@@ -691,7 +691,7 @@ a {
     border-radius: 28px;
 }
 .publicacion .galeria .proyecto img{
-    width: 100%;
+    width: 300px;
     display: block;
     height: 300px;
     border-radius: 28px;
@@ -744,7 +744,7 @@ a {
     border-radius: 28px;
 }
 .certificacion .galeria .proyecto img{
-    width: 100%;
+    width: 300px;
     display: block;
     border-radius: 28px;
 
@@ -758,7 +758,7 @@ a {
 }
 
 .certificacion .galeria .proyecto img{
-    width: 100%;
+    width: 300px;
     height: 300px;
     display: block;
     border-radius: 28px;
