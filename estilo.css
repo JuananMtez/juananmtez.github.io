@@ -14,6 +14,7 @@ a {
     color: white;
     
     
+    
   }
   
   a:visited {
@@ -729,7 +730,7 @@ a {
 }
 .certificacion .galeria .proyecto{
     position: relative;
-    max-width: 340px;
+    max-width: 300px;
     height: fit-content;
     margin: 10px;
     border-radius: 28px;
@@ -927,7 +928,7 @@ footer .arriba{
         padding: 10px 0;
     }
 }
-@media screen and (max-width:700px){
+@media screen and (max-width:1316px){
     .sobremi .fila{
         display: block;
     }
