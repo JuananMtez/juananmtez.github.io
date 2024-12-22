@@ -241,8 +241,14 @@ a {
 }
 
 .skills .fila {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
+    gap: 20px; /* Espaciado entre las columnas y las filas */
+    justify-content: center; /* Centrado horizontal */
+    align-items: start; 
 }
+
+
 
 .skills .fila .col {
     width: 50%;
@@ -273,210 +279,7 @@ a {
 }
 
 
-/* Estas clases se agregaran dinamicamente mediante javascript */
-.skills .skill .javascript{
-    width: 0%;
-    animation: 2s javascript forwards;
-}
-@keyframes javascript {
-    0%{width: 0%;}
-    100%{width: 85%;}
-}
 
-.skills .skill .htmlcss{
-    width: 0%;
-    animation: 2s htmlcss forwards;
-}
-@keyframes htmlcss {
-    0%{width: 0%;}
-    100%{width: 70%;}
-}
-
-.skills .skill .nodejs{
-    width: 0%;
-    animation: 2s nodejs forwards;
-}
-
-@keyframes nodejs {
-    0%{width: 0%;}
-    100%{width: 80%;}
-}
-
-
-.skills .skill .python{
-    width: 0%;
-    animation: 2s python forwards;
-}
-
-@keyframes python {
-    0%{width: 0%;}
-    100%{width: 80%;}
-}
-
-.skills .skill .kotlin{
-    width: 0%;
-    animation: 2s kotlin forwards;
-}
-
-@keyframes kotlin {
-    0%{width: 0%;}
-    100%{width: 95%;}
-}
-
-.skills .skill .mysql{
-    width: 0%;
-    animation: 2s mysql forwards;
-}
-
-@keyframes mysql {
-    0%{width: 0%;}
-    100%{width: 80%;}
-}
-
-
-
-.skills .skill .java{
-    width: 0%;
-    animation: 2s java forwards;
-}
-@keyframes java {
-    0%{width: 0%;}
-    100%{width: 90%;}
-}
-
-.skills .skill .reactjs{
-    width: 0%;
-    animation: 2s reactjs forwards;
-}
-@keyframes reactjs {
-    0%{width: 0%;}
-    100%{width: 90%;}
-}
-
-
-.skills .skill .angular{
-    width: 0%;
-    animation: 2s angular forwards;
-}
-@keyframes angular {
-    0%{width: 0%;}
-    100%{width: 70%;}
-}
-
-
-.skills .skill .electrojs{
-    width: 0%;
-    animation: 2s electrojs forwards;
-}
-@keyframes electrojs {
-    0%{width: 0%;}
-    100%{width: 80%;}
-}
-
-.skills .skill .fastapi{
-    width: 0%;
-    animation: 2s fastapi forwards;
-}
-@keyframes fastapi {
-    0%{width: 0%;}
-    100%{width: 95%;}
-}
-
-.skills .skill .springboot{
-    width: 0%;
-    animation: 2s springboot forwards;
-}
-@keyframes springboot {
-    0%{width: 0%;}
-    100%{width: 70%;}
-}
-
-.skills .skill .micronaut{
-    width: 0%;
-    animation: 2s micronaut forwards;
-}
-@keyframes micronaut {
-    0%{width: 0%;}
-    100%{width: 90%;}
-}
-
-
-.skills .skill .comunication{
-    width: 0%;
-    animation: 2s comunication forwards;
-}
-
-@keyframes comunication {
-    0%{width: 0%;}
-    100%{width: 80%;}
-}
-
-.skills .skill .workteam{
-    width: 0%;
-    animation: 2s workteam forwards;
-}
-@keyframes workteam {
-    0%{width: 0%;}
-    100%{width: 100%;}
-}
-
-.skills .skill .time{
-    width: 0%;
-    animation: 2s time forwards;
-}
-@keyframes time {
-    0%{width: 0%;}
-    100%{width: 90%;}
-}
-
-
-.skills .skill .creatividad{
-    width: 0%;
-    animation: 2s creatividad forwards;
-}
-@keyframes creatividad {
-    0%{width: 0%;}
-    100%{width: 99%;}
-}
-
-.skills .skill .dedicacion{
-    width: 0%;
-    animation: 2s dedicacion forwards;
-}
-@keyframes dedicacion {
-    0%{width: 0%;}
-    100%{width: 100%;}
-}
-
-
-.skills .skill .adaptabilidad{
-    width: 0%;
-    animation: 2s adaptabilidad forwards;
-}
-@keyframes adaptabilidad {
-    0%{width: 0%;}
-    100%{width: 100%;}
-}
-
-.skills .skill .solving{
-    width: 0%;
-    animation: 2s solving forwards;
-}
-@keyframes solving {
-    0%{width: 0%;}
-    100%{width: 80%;}
-}
-
-
-
-.skills .skill .proyect{
-    width: 0%;
-    animation: 2s proyect forwards;
-}
-@keyframes proyect {
-    0%{width: 0%;}
-    100%{width: 94%;}
-}
 /* SECCION CURRICULUM */
 .curriculum{
     background-color: #1e2326;
@@ -928,7 +731,7 @@ footer .arriba{
         padding: 10px 0;
     }
 }
-@media screen and (max-width:1316px){
+@media screen and (max-width:768px){
     .sobremi .fila{
         display: block;
     }
@@ -937,8 +740,9 @@ footer .arriba{
     }
 
     .skills .fila{
-        display: block;
-    }
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center; /* Centrado horizontal */
+        }
     .skills .fila .col{
         width: 100%;
     }
@@ -974,4 +778,10 @@ footer .arriba{
         width: 100%;
     }
 
+}
+@media (max-width: 480px) {
+    .skills .fila {
+        justify-content: center; /* Centrado horizontal */
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
 }
