@@ -70,16 +70,17 @@ a {
 /* SECCION I N I C I O */
 .inicio{
     background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
-    url(img/fondo.jpg);
+    url(img/fondo2.jpg);
     background-size: cover;
     height: 100vh;
     color: #fff;
     display: flex;
     align-items: center;
+    padding: 20vh;
+
 }
 .inicio .contenido-banner{
     padding: 20px;
-    background-color: #1e2326;
     max-width: 350px;
     margin: auto;
     text-align: center;
@@ -113,6 +114,7 @@ a {
     line-height: 42px;
     margin: 40px 5px;
     font-size: 20px;
+    border-color: #1CB698;
     transition: .3s;
 }
 .inicio .contenido-banner .redes a:hover{
@@ -207,6 +209,8 @@ a {
     color: #fff;
     position: relative;
     z-index: 10;
+    border-color: #1CB698;
+
 }
 .sobremi button .overlay{
     position: absolute;
@@ -226,6 +230,7 @@ a {
     background-color: #252A2E;
     color: #fff;
     padding: 50px 20px;
+    display: flex;
 }
 
 .skills .contenido-seccion {
@@ -243,7 +248,8 @@ a {
 .skills .fila {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
-    gap: 20px; /* Espaciado entre las columnas y las filas */
+    column-gap: 285px;
+    row-gap: 20px;
     justify-content: center; /* Centrado horizontal */
     align-items: start; 
 }
@@ -626,6 +632,8 @@ a {
     color: #fff;
     position: relative;
     z-index: 10;
+    border-color: #1CB698;
+
 }
 .contacto button .overlay{
     position: absolute;
@@ -684,7 +692,8 @@ footer .redes a{
     width: 42px;
     height: 42px;
     line-height: 42px;
-    
+    border-color: #1CB698;
+
     font-size: 20px;
     transition: .3s;
 }
@@ -731,7 +740,7 @@ footer .arriba{
         padding: 10px 0;
     }
 }
-@media screen and (max-width:768px){
+@media screen and (max-width:1120px){
     .sobremi .fila{
         display: block;
     }
@@ -779,7 +788,7 @@ footer .arriba{
     }
 
 }
-@media (max-width: 480px) {
+@media (max-width: 678px) {
     .skills .fila {
         justify-content: center; /* Centrado horizontal */
         grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
