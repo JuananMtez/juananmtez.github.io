@@ -76,7 +76,6 @@ a {
     color: #fff;
     display: flex;
     align-items: center;
-    padding: 20vh;
 
 }
 .inicio .contenido-banner{
@@ -230,7 +229,6 @@ a {
     background-color: #252A2E;
     color: #fff;
     padding: 50px 20px;
-    display: flex;
 }
 
 .skills .contenido-seccion {
