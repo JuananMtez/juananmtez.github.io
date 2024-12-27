@@ -246,7 +246,7 @@ a {
 .skills .fila {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Tres columnas de igual ancho */
-    column-gap: 285px;
+    column-gap: 280px;
     row-gap: 20px;
     justify-content: center; /* Centrado horizontal */
     align-items: start; 
