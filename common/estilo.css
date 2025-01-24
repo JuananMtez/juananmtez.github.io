@@ -753,10 +753,12 @@ footer .arriba{
     nav.responsive{
         display: block;
         position: absolute;
-        right: 0;
+        right: 3%;
         top: 75px;
         background-color: #252A2E;
         width: 180px;
+        border: 1px solid #1CB698;
+        border-radius: 18px;
     }
     nav.responsive ul{
         display: block !important;
