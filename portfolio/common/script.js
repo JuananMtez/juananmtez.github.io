@@ -92,10 +92,10 @@ function cambiarIdioma() {
 
     switch(idiomaSeleccionado) {
         case 'es':
-            window.location.href = "/es"; // Redirigir a la versión en español
+            window.location.href = "/portfolio/es"; // Redirigir a la versión en español
             break;
         case 'en':
-            window.location.href = "/en"; // Redirigir a la versión en inglés
+            window.location.href = "/portfolio/en"; // Redirigir a la versión en inglés
             break;
         default:
             break;

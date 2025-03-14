@@ -16,10 +16,10 @@
 
         // Redirect to the corresponding folder or a default language
         if (supportedLanguages.includes(languageCode)) {
-            window.location.href = `/${languageCode}`;
+            window.location.href = `/portfolio/${languageCode}`;
         } else {
             // Default to English if the language is unsupported
-            window.location.href = '/en';
+            window.location.href = '/portfolio/en';
         }
     </script>
 </head>
