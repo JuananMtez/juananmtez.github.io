@@ -84,6 +84,15 @@ body {
     overflow-x: hidden;
 }
 
+img, iframe, video {
+    max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6, li, a, span, strong {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
 ::selection {
     background: var(--accent);
     color: var(--bg-primary);
@@ -527,15 +536,21 @@ section h2::after {
     padding: var(--space-3) 0;
     border-bottom: 1px solid var(--border-subtle);
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    gap: var(--space-2);
     color: var(--text-secondary);
     font-size: 15px;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 .sobremi .fila .col ul li:last-child { border-bottom: none; }
 .sobremi .fila .col ul li strong {
     display: inline-block;
     color: var(--text-tertiary);
     width: 110px;
+    flex-shrink: 0;
     font-weight: 500;
     font-size: 13px;
     text-transform: uppercase;
@@ -1046,6 +1061,9 @@ section h2::after {
     font-size: 15px;
     display: flex;
     align-items: center;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 .contacto .col .info ul li:last-child { margin-bottom: 0; }
 .contacto .col .info ul li i {
@@ -1056,9 +1074,15 @@ section h2::after {
     margin-right: var(--space-3);
     width: 38px;
     height: 38px;
+    flex-shrink: 0;
     background: var(--accent-soft);
     border-radius: var(--r-md);
     font-size: 16px;
+}
+.contacto .col .info ul li a {
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-all;
 }
 .contacto .col img {
     width: 100%;
