@@ -69,8 +69,8 @@
 
 html {
     scroll-behavior: smooth;
-    min-width: 360px;
     scroll-padding-top: var(--header-h);
+    overflow-x: clip;
 }
 
 body {
@@ -807,7 +807,7 @@ section h2::after {
 }
 .portfolio .galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
     gap: var(--space-5);
     margin-top: var(--space-6);
 }
@@ -892,7 +892,7 @@ section h2::after {
 }
 .publicacion .galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 360px));
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 360px));
     justify-content: center;
     gap: var(--space-5);
     margin-top: var(--space-6);
@@ -945,7 +945,7 @@ section h2::after {
 }
 .certificacion .galeria {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 360px));
+    grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 360px));
     justify-content: center;
     gap: var(--space-5);
     margin-top: var(--space-6);
@@ -1222,7 +1222,22 @@ footer .arriba:hover {
     .skills .fila { grid-template-columns: 1fr; }
     .sobremi .fila .col .contenedor-intereses { justify-content: center; }
     .inicio .contenido-banner img { width: 130px; height: 130px; }
+    .inicio .contenido-banner h1 { font-size: clamp(28px, 8vw, 36px); }
     .cv-actions { flex-direction: column; align-items: stretch; }
     .cv-actions a { width: 100%; }
     .cv-actions button { width: 100%; justify-content: center; }
+
+    .sobremi .fila .col ul { padding: var(--space-2) var(--space-4); }
+    .sobremi .fila .col ul li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2px;
+    }
+    .sobremi .fila .col ul li strong { width: auto; }
+
+    .curriculum .fila .item { padding: var(--space-4); }
+    .curriculum .fila .item:hover { transform: none; }
+
+    .portfolio .galeria .proyecto img,
+    .portfolio .galeria .proyecto iframe { height: 180px; padding: var(--space-4); }
 }
