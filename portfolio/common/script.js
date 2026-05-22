@@ -1,101 +1,151 @@
+/* ============================================================
+   Portfolio interactions
+   ============================================================ */
+
 let menuVisible = false;
 
-
-function mostrarOcultarMenu(){
-    if(menuVisible){
-        document.getElementById("nav").classList ="";
+function mostrarOcultarMenu() {
+    const nav = document.getElementById("nav");
+    if (menuVisible) {
+        nav.classList.remove("responsive");
         menuVisible = false;
-    }else{
-        document.getElementById("nav").classList ="responsive";
+    } else {
+        nav.classList.add("responsive");
         menuVisible = true;
     }
 }
 
-function seleccionar(){
-    document.getElementById("nav").classList = "";
+function seleccionar() {
+    document.getElementById("nav").classList.remove("responsive");
     menuVisible = false;
 }
-//Funcion que aplica las animaciones de las habilidades
-function efectoHabilidades(){
-    var skills = document.getElementById("skills");
-    
-    var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
-    if(distancia_skills >= 300){
-        
-        let habilidades = document.getElementsByClassName("progreso");
-        habilidades[0].classList.add("javascript");
-        habilidades[1].classList.add("htmlcss");
-        habilidades[2].classList.add("nodejs");
-        habilidades[3].classList.add("java");
-        habilidades[4].classList.add("python");
-        habilidades[5].classList.add("kotlin");
-        habilidades[6].classList.add("mysql");
 
-
-        habilidades[7].classList.add("reactjs");
-        habilidades[8].classList.add("angular");
-        habilidades[9].classList.add("electrojs");
-        habilidades[10].classList.add("fastapi");
-        habilidades[11].classList.add("springboot");
-        habilidades[12].classList.add("micronaut");
-
-        habilidades[13].classList.add("comunication");
-        habilidades[14].classList.add("workteam");
-        habilidades[15].classList.add("dedicacion");
-        habilidades[16].classList.add("adaptabilidad");
-        habilidades[17].classList.add("time")
-        habilidades[18].classList.add("solving")
-        
-
-
-
-
+/* Header scrolled state + scroll progress bar */
+function onScroll() {
+    const header = document.querySelector(".contenedor-header");
+    if (header) {
+        if (window.scrollY > 20) header.classList.add("scrolled");
+        else header.classList.remove("scrolled");
     }
 
+    const progress = document.querySelector(".scroll-progress");
+    if (progress) {
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrolled = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
+        progress.style.width = scrolled + "%";
+    }
 }
 
+window.addEventListener("scroll", onScroll, { passive: true });
+window.addEventListener("load", onScroll);
 
-//detecto el scrolling para aplicar la animacion de la barra de habilidades
-window.onscroll = function(){
-    efectoHabilidades();
-} 
+/* Reveal on scroll via IntersectionObserver */
+function initReveal() {
+    const targets = document.querySelectorAll(".reveal");
+    if (!("IntersectionObserver" in window) || targets.length === 0) {
+        targets.forEach(t => t.classList.add("is-visible"));
+        return;
+    }
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("is-visible");
+                io.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+    targets.forEach(t => io.observe(t));
+}
 
+document.addEventListener("DOMContentLoaded", initReveal);
+
+/* Contact form */
 function sendEmail() {
-    const name = document.getElementById("name").value;
-    const phone = document.getElementById("phone").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
+    const nameEl = document.getElementById("name");
+    const phoneEl = document.getElementById("phone");
+    const emailEl = document.getElementById("email");
+    const messageEl = document.getElementById("message");
+    const statusEl = document.getElementById("form-status");
 
+    const name = nameEl?.value.trim() || "";
+    const phone = phoneEl?.value.trim() || "";
+    const email = emailEl?.value.trim() || "";
+    const message = messageEl?.value.trim() || "";
 
-    
+    const setStatus = (text, kind) => {
+        if (!statusEl) return;
+        statusEl.textContent = text;
+        statusEl.classList.remove("success", "error");
+        if (kind) statusEl.classList.add(kind);
+    };
 
+    if (!name || !email || !message) {
+        setStatus(
+            document.documentElement.lang === "es"
+                ? "Por favor, completa nombre, email y mensaje."
+                : "Please fill in name, email and message.",
+            "error"
+        );
+        return;
+    }
 
+    const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if (!emailValid) {
+        setStatus(
+            document.documentElement.lang === "es"
+                ? "Introduce un email válido."
+                : "Please enter a valid email.",
+            "error"
+        );
+        return;
+    }
+
+    setStatus(
+        document.documentElement.lang === "es" ? "Enviando..." : "Sending...",
+        null
+    );
+
+    if (typeof emailjs === "undefined") {
+        setStatus(
+            document.documentElement.lang === "es"
+                ? "Servicio de email no disponible."
+                : "Email service unavailable.",
+            "error"
+        );
+        return;
+    }
 
     emailjs.send("service_wdu94ob", "template_c0e1ax9", {
-        name,
-        phone,
-        email,
-        message,
+        name, phone, email, message,
     }, "4xLglJ5VmPf4PajbD")
-    .then(function(response) {
-        console.log("Email sent successfully:", response);
-        // Puedes agregar aquí código para mostrar un mensaje de confirmación al usuario
-    })
-    .catch(function(error) {
-        console.error("Email could not be sent:", error);
-        // Puedes agregar aquí código para manejar errores
-    });
+        .then(function (response) {
+            setStatus(
+                document.documentElement.lang === "es"
+                    ? "¡Mensaje enviado! Te responderé pronto."
+                    : "Message sent! I will reply soon.",
+                "success"
+            );
+            [nameEl, phoneEl, emailEl, messageEl].forEach(el => { if (el) el.value = ""; });
+        })
+        .catch(function (error) {
+            console.error("Email could not be sent:", error);
+            setStatus(
+                document.documentElement.lang === "es"
+                    ? "No se pudo enviar. Inténtalo de nuevo."
+                    : "Could not send. Please try again.",
+                "error"
+            );
+        });
 }
 
 function cambiarIdioma() {
     const idiomaSeleccionado = document.getElementById('language-select').value;
-
-    switch(idiomaSeleccionado) {
+    switch (idiomaSeleccionado) {
         case 'es':
-            window.location.href = "/portfolio/es"; // Redirigir a la versión en español
+            window.location.href = "/portfolio/es";
             break;
         case 'en':
-            window.location.href = "/portfolio/en"; // Redirigir a la versión en inglés
+            window.location.href = "/portfolio/en";
             break;
         default:
             break;

@@ -4,724 +4,483 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Antonio Martínez López — Desarrollador Backend · Java · Spring Boot</title>
+    <meta name="description" content="Desarrollador Backend con 3+ años de experiencia construyendo microservicios cloud-native escalables. Java, Spring Boot, Kubernetes, Kafka, RabbitMQ, Couchbase, Elasticsearch. Abierto a remoto y oportunidades en la UE.">
+    <meta name="keywords" content="Desarrollador Backend, Java Developer, Spring Boot, Microservicios, Sistemas Distribuidos, Kubernetes, Kafka, Couchbase, Elasticsearch, Cloud Native, REST API, Murcia, España, Portfolio, Juan Antonio Martinez">
+    <meta name="author" content="Juan Antonio Martínez López">
+    <meta name="theme-color" content="#0a0e10">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:title" content="Juan Antonio Martínez López — Desarrollador Backend">
+    <meta property="og:description" content="3+ años construyendo microservicios cloud-native escalables con Java, Spring Boot y Kubernetes. Actualmente, ticketing en tiempo real en Onebox.">
+    <meta property="og:image" content="../common/img/a2.jpeg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Juan Antonio Martínez López — Desarrollador Backend">
+    <meta name="twitter:description" content="3+ años construyendo microservicios cloud-native escalables con Java, Spring Boot y Kubernetes.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Juan Antonio Martínez López - Desarrollador Backend</title>
     <link rel="stylesheet" href="../common/estilo.css">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
 </head>
 <body>
-    <!-- MENU ENCABEZADO -->
+    <!-- Scroll progress bar -->
+    <div class="scroll-progress" aria-hidden="true"></div>
+
+    <!-- HEADER -->
     <div class="contenedor-header">
         <header>
             <div class="logo">
-                <a href="#">Juan Antonio</a>
+                <a href="#home" aria-label="Inicio">Juan Antonio</a>
             </div>
-            <nav id="nav">
+            <nav id="nav" aria-label="Principal">
                 <ul>
                     <li><a href="#home" onclick="seleccionar()">Inicio</a></li>
                     <li><a href="#aboutme" onclick="seleccionar()">Sobre mí</a></li>
                     <li><a href="#skills" onclick="seleccionar()">Habilidades</a></li>
-                    <li><a href="#curriculum" onclick="seleccionar()">Currículum</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">Experiencia</a></li>
                     <li><a href="#portfolio" onclick="seleccionar()">Portfolio</a></li>
                     <li><a href="#publication" onclick="seleccionar()">Publicaciones</a></li>
                     <li><a href="#certification" onclick="seleccionar()">Certificaciones</a></li>
                     <li><a href="#contact" onclick="seleccionar()">Contacto</a></li>
                     <li class="language-selector">
-                        <select id="language-select" onchange="cambiarIdioma()">
-                            <option selected value="es">🇪🇸</option>
-                            <option value="en">🇬🇧</option>
+                        <select id="language-select" onchange="cambiarIdioma()" aria-label="Idioma">
+                            <option selected value="es">🇪🇸 ES</option>
+                            <option value="en">🇬🇧 EN</option>
                         </select>
                     </li>
                 </ul>
             </nav>
-            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()" aria-label="Abrir menú" role="button">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </header>
     </div>
 
-    <!-- SECCION INICIO -->
+    <!-- HERO -->
     <section id="home" class="inicio">
         <div class="contenido-banner">
             <div class="contenedor-img">
-                <img src="../common/img/a2.jpeg" alt="">
+                <img src="../common/img/a2.jpeg" alt="Juan Antonio Martínez López">
             </div>
             <h1>Juan Antonio Martínez López</h1>
-            <h2>Ingeniero de Software - Desarrollador Backend</h2>
-            <div class="redes">               
-                <a href="https://www.linkedin.com/in/juanantonio-martinez/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://github.com/JuananMtez" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://stackoverflow.com/users/19906802/juan-antonio-martinez-lopez" target="_blank"><i class="fa-brands fa-stack-overflow"></i></a>
-
-                
+            <h2>Desarrollador Backend · <span class="accent">Java · Spring Boot · Microservicios · Cloud</span></h2>
+            <p class="tagline">Construyendo <strong>microservicios cloud-native escalables</strong> para entornos de alta demanda. Actualmente impulsando la infraestructura de ticketing en tiempo real en <strong>Onebox</strong>.</p>
+            <div class="redes" aria-label="Redes sociales">
+                <a href="https://www.linkedin.com/in/juanantonio-martinez/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://github.com/JuananMtez" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://stackoverflow.com/users/19906802/juan-antonio-martinez-lopez" target="_blank" rel="noopener" aria-label="Stack Overflow"><i class="fa-brands fa-stack-overflow"></i></a>
             </div>
+            <div class="availability-badge" role="status">Abierto a remoto y oportunidades en la UE</div>
         </div>
+        <div class="scroll-cue" aria-hidden="true">Scroll</div>
     </section>
 
-    <!-- SECCION SOBRE MI -->
-    <section id="aboutme" class="sobremi">
+    <!-- SOBRE MI -->
+    <section id="aboutme" class="sobremi reveal">
         <div class="contenido-seccion">
             <h2>Sobre mí</h2>
-            <p><span>Bienvenido, soy Juan Antonio Martínez López.</span> En los últimos años, descubrí gracias a mi Grado y Máster en la Universidad de Murcia y a los múltiples proyectos de software en los que participé que quiero dedicar mi futura vida profesional a la <span>Ingeniería de Software</span>, especialmente al <span>Desarrollo Backend</span>. Soy un apasionado de la Ingeniería de Software, por lo que incluso utilizo mi tiempo libre para aprender más sobre Arquitecturas de Software Limpio, Algoritmos y Estructuras de Datos.<br/><br/> Actualmente, trabajo como <span>Desarrollador Backend</span> en Onebox - Ticket Distribution System.</p>
+            <p><span>Desarrollador Backend con 3+ años de experiencia</span> diseñando y desplegando <span>microservicios escalables</span> para entornos cloud-native de alta demanda. Actualmente formo parte del equipo de ingeniería de <span>Onebox — Ticket Distribution System</span>, donde ayudo a operar una plataforma de ticketing en tiempo real sobre un stack de Java 17 y Spring Boot.<br/><br/>
+                Soy <span>Graduado y Máster en Ingeniería Informática</span> por la Universidad de Murcia, donde publiqué un <span>artículo en Elsevier</span> y lideré un Work Package en el proyecto europeo <span>H2020 Valkyries</span>. Me apasionan la arquitectura limpia, los sistemas distribuidos y escribir código que escale — tanto en rendimiento como en velocidad de equipo.</p>
 
             <div class="fila">
-                <!-- datos personales -->
                 <div class="col">
                     <h3>Datos personales</h3>
                     <ul>
-                        <li>
-                            <strong>Nombre</strong>
-                            Juan Antonio Martínez López
-                        </li>
-                        <li>
-                            <strong>Email</strong>
-                            martinezlopezjuanantonio@gmail.com
-                        </li>
-                        <li>
-                            <strong>Origen</strong>
-                            Murcia, España
-                        </li>
-                        <li>
-                            <strong>Residencia</strong>
-                            Murcia, España
-                        </li>
-                        <li>
-                            <strong>Edad</strong>
-                            27
-                        </li>
-                        <li>
-                            <strong>Idiomas</strong>
-                            Español (nativo), Inglés (B2), Alemán (A1)
-                        </li>
-  
+                        <li><strong>Nombre</strong> Juan Antonio Martínez López</li>
+                        <li><strong>Email</strong> martinezlopezjuanantonio@gmail.com</li>
+                        <li><strong>Ubicación</strong> Murcia, España</li>
+                        <li><strong>Estado</strong> Abierto a remoto y UE</li>
+                        <li><strong>Idiomas</strong> Español (nativo), Inglés (B2), Alemán (A1)</li>
                     </ul>
                 </div>
 
-                <!-- intereses -->
                 <div class="col">
-                    <h3>Servicios</h3>
+                    <h3>Lo que hago</h3>
                     <div class="contenedor-intereses">
                         <div class="interes">
                             <i class="fa-solid fa-server"></i>
-                            <span>Desarollador Backend</span>
-                        </div> 
+                            <span>Backend &amp; APIs</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-diagram-project"></i>
+                            <span>Microservicios</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-cloud"></i>
+                            <span>Cloud &amp; DevOps</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-database"></i>
+                            <span>Datos distribuidos</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-message"></i>
+                            <span>Event-driven</span>
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span>Arquitectura limpia</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-                <a href="../common/pdf/CV___English.pdf" target="_blank">
+            <div class="cv-actions">
+                <a href="../common/pdf/CV___English.pdf" target="_blank" rel="noopener">
                     <button>
-                      Descargar CV en Inglés <i class="fa-solid fa-download"></i>
-                      <span class="overlay"></span>
+                        Descargar CV en Inglés <i class="fa-solid fa-download"></i>
+                        <span class="overlay"></span>
                     </button>
-                  </a>
-                  <a href="../common/pdf/CV__Spanish.pdf" target="_blank">
-                    <button>
+                </a>
+                <a href="../common/pdf/CV__Spanish.pdf" target="_blank" rel="noopener">
+                    <button class="secondary">
                         Descargar CV en Español <i class="fa-solid fa-download"></i>
-                      <span class="overlay"></span>
+                        <span class="overlay"></span>
                     </button>
-                  </a>
+                </a>
             </div>
-            
         </div>
     </section>
 
-    <!-- SECCION SKILLS -->
-    <section class="skills" id="skills">
+    <!-- HABILIDADES -->
+    <section class="skills reveal" id="skills">
         <div class="contenido-seccion">
             <h2>Habilidades</h2>
             <div class="fila">
-                <!-- Technical Skill -->
                 <div class="col">
                     <h3>Lenguajes</h3>
-                    <div class="skill">
-                        <img src="../common/img/javascript.png" alt="Icono">
-                        <span>Javascript</span>
-                    </div>
-                    <div class="skill">
-                        <img src="../common/img/html5.svg" alt="Icono">
-
-                        <span>HTML</span>
-                        
-                    </div>
-                    <div class="skill">
-                        <img src="../common/img/css3.svg" alt="Icono">
-
-                        <span>CSS</span>
-                        
-                    </div>
-                    <div class="skill">
-                        <img src="../common/img/java.png" alt="Icono">
-
-                        <span>Java</span>
-                        
-                    </div>
-                    <div class="skill">
-                        <img src="../common/img/python.png" alt="Icono">
-
-                        <span>Python</span>
-                        
-                    </div>
-                    <div class="skill">
-                        <img src="../common/img/kotlin.png" alt="Icono">
-
-                        <span>Kotlin</span>
-                        
-                    </div>
-                    
+                    <div class="skill"><img src="../common/img/javascript.png" alt=""><span>JavaScript</span></div>
+                    <div class="skill"><img src="../common/img/html5.svg" alt=""><span>HTML</span></div>
+                    <div class="skill"><img src="../common/img/css3.svg" alt=""><span>CSS</span></div>
+                    <div class="skill"><img src="../common/img/java.png" alt=""><span>Java</span></div>
+                    <div class="skill"><img src="../common/img/python.png" alt=""><span>Python</span></div>
+                    <div class="skill"><img src="../common/img/kotlin.png" alt=""><span>Kotlin</span></div>
                 </div>
                 <div class="col">
-                <h3>Frontend</h3>
-                <div class="skill">
-                    <img src="../common/img/react.png" alt="Icono">
-
-                    <span>React.js</span>
-                    
-                </div>
-                <div class="skill">
-                    <img src="../common/img/angular.png" alt="Icono">
-
-                    <span>Angular</span>
-                    
-                </div>
-                <div class="skill">
-                    <img src="../common/img/electrong.png" alt="Icono">
-
-                    <span>Electron.js</span>
-                    
-                </div>
-                </div>
-                <!-- Technical Skill -->
-                <div class="col">
-                    <h3>Testing</h3>
-                   
-                    <div class="skill">
-                        <img src="../common/img/junit5-logo.png" alt="Icono">
-
-                        <span>JUnit 5</span>
-                        
-                    </div>
-                    <div class="skill">
-                        <img src="../common/img/image-59-removebg-preview.png" alt="Icono">
-
-                        <span>Mockito</span>
-                        
-                    </div>
-                    <div class="skill">
-                        <img src="../common/img/karate.svg" alt="Icono">
-
-                        <span>Karate</span>
-                        
-                    </div>
-                    <div class="skill">
-                        <img src="../common/img/testcontainers.png" alt="Icono">
-
-                        <span>Testcontainers</span>
-                        
-                    </div>
+                    <h3>Frontend</h3>
+                    <div class="skill"><img src="../common/img/react.png" alt=""><span>React.js</span></div>
+                    <div class="skill"><img src="../common/img/angular.png" alt=""><span>Angular</span></div>
+                    <div class="skill"><img src="../common/img/electrong.png" alt=""><span>Electron.js</span></div>
                 </div>
                 <div class="col">
                     <h3>Backend</h3>
-                   
-                    <div class="skill">
-                        <img src="../common/img/nodejs-icon.svg" alt="Icono">
-
-                        <span>Node.js</span>
-                        
-                    </div>
-                    <div class="skill">
-                        <img src="../common/img/fastapi.svg" alt="Icono">
-
-                        <span>FastAPI</span>
-                        
-                    </div>
-                    <div class="skill">
-                        <img src="../common/img/spring.svg" alt="Icono">
-
-                        <span>Spring Boot</span>
-                        
-                    </div>
-                    <div class="skill">
-                        <img src="../common/img/micronaut.png" alt="Icono">
-
-                        <span>Micronaut</span>
-                        
-                    </div>
+                    <div class="skill"><img src="../common/img/nodejs-icon.svg" alt=""><span>Node.js</span></div>
+                    <div class="skill"><img src="../common/img/fastapi.svg" alt=""><span>FastAPI</span></div>
+                    <div class="skill"><img src="../common/img/spring.svg" alt=""><span>Spring Boot</span></div>
+                    <div class="skill"><img src="../common/img/micronaut.png" alt=""><span>Micronaut</span></div>
                 </div>
-                <!-- Technical Skill -->
+                <div class="col">
+                    <h3>Testing</h3>
+                    <div class="skill"><img src="../common/img/junit5-logo.png" alt=""><span>JUnit 5</span></div>
+                    <div class="skill"><img src="../common/img/image-59-removebg-preview.png" alt=""><span>Mockito</span></div>
+                    <div class="skill"><img src="../common/img/karate.svg" alt=""><span>Karate</span></div>
+                    <div class="skill"><img src="../common/img/testcontainers.png" alt=""><span>Testcontainers</span></div>
+                </div>
                 <div class="col">
                     <h3>Bases de datos</h3>
-                    <div class="skill">
-                        <img src="../common/img/mysql.png" alt="Icono">
-
-                        <span>MySQL</span>
-                        
-                    </div>
-                    <div class="skill">
-                        <img src="../common/img/oracle.png" alt="Icono">
-
-                        <span>Oracle SQL</span>
-                        
-                    </div>
-                    <div class="skill">
-                        <img src="../common/img/postgres.png" alt="Icono">
-
-                        <span>PostgreSQL</span>
-                        
-                    </div>
-                    <div class="skill">
-                        <img src="../common/img/mongodb.svg" alt="Icono">
-    
-                        <span>MongoDB</span>
-                    
-                    </div>
-                    <div class="skill">
-                        <img src="../common/img/couchbase.png" alt="Icono">
-    
-                        <span>Couchbase</span>
-                    
-                    </div>
-                    <div class="skill">
-                        <img src="../common/img/elasticsearch.svg" alt="Icono">
-    
-                        <span>Elasticsearch</span>
-                    
-                    </div>
-                    
+                    <div class="skill"><img src="../common/img/mysql.png" alt=""><span>MySQL</span></div>
+                    <div class="skill"><img src="../common/img/oracle.png" alt=""><span>Oracle SQL</span></div>
+                    <div class="skill"><img src="../common/img/postgres.png" alt=""><span>PostgreSQL</span></div>
+                    <div class="skill"><img src="../common/img/mongodb.svg" alt=""><span>MongoDB</span></div>
+                    <div class="skill"><img src="../common/img/couchbase.png" alt=""><span>Couchbase</span></div>
+                    <div class="skill"><img src="../common/img/elasticsearch.svg" alt=""><span>Elasticsearch</span></div>
                 </div>
-
-              <!-- Technical Skill -->
-              <div class="col">
-                <h3>Mensajería</h3>
-    
-                <div class="skill">
-                    <img src="../common/img/kafka.png" alt="Icono">
-
-                    <span>Apache Kafka</span>
-                
+                <div class="col">
+                    <h3>Mensajería</h3>
+                    <div class="skill"><img src="../common/img/kafka.png" alt=""><span>Apache Kafka</span></div>
+                    <div class="skill"><img src="../common/img/rabbitmq.png" alt=""><span>RabbitMQ</span></div>
                 </div>
-                <div class="skill">
-                    <img src="../common/img/rabbitmq.png" alt="Icono">
-
-                    <span>RabbitMQ</span>
-                
-                </div>
-            </div>
-                <!-- Cloud -->
                 <div class="col">
                     <h3>Cloud</h3>
-                    <div class="skill">
-                        <img src="../common/img/aws3.png" alt="Icono">
-    
-                        <span>AWS</span>
-                    
-                    </div>
-                    
+                    <div class="skill"><img src="../common/img/aws3.png" alt=""><span>AWS</span></div>
                 </div>
                 <div class="col">
                     <h3>DevOps</h3>
-                    
-                    <div class="skill">
-                        <img src="../common/img/docker.png" alt="Icono">
-    
-                        <span>Docker</span>
-                    
-                    </div>
-                    <div class="skill">
-                        <img src="../common/img/k-logo.webp" alt="Icono">
-    
-                        <span>Kubernetes</span>
-                    
-                    </div>
-                    <div class="skill">
-                        <img src="../common/img/Jenkins_logo.svg.png" alt="Icono">
-    
-                        <span>Jenkins</span>
-                    
-                    </div>
-                    
+                    <div class="skill"><img src="../common/img/docker.png" alt=""><span>Docker</span></div>
+                    <div class="skill"><img src="../common/img/k-logo.webp" alt=""><span>Kubernetes</span></div>
+                    <div class="skill"><img src="../common/img/Jenkins_logo.svg.png" alt=""><span>Jenkins</span></div>
                 </div>
                 <div class="col">
                     <h3>Monitorización</h3>
-                    <div class="skill">
-                        <img src="../common/img/datadog.svg" alt="Icono">
-    
-                        <span>Datadog</span>
-                    
-                    </div>
-                    <div class="skill">
-                        <img src="../common/img/kibana.svg" alt="Icono">
-    
-                        <span>Kibana</span>
-                    
-                    </div>
+                    <div class="skill"><img src="../common/img/datadog.svg" alt=""><span>Datadog</span></div>
+                    <div class="skill"><img src="../common/img/kibana.svg" alt=""><span>Kibana</span></div>
                 </div>
-               
-                
                 <div class="col">
                     <h3>Versionado</h3>
-                    
-                    <div class="skill">
-                        <img src="../common/img/git.png" alt="Icono">
-    
-                        <span>Git</span>
-                    
-                    </div>
-                    <div class="skill">
-                        <img src="../common/img/github.png" alt="Icono">
-    
-                        <span>GitHub</span>
-                    
-                    </div>
-                    <div class="skill">
-                        <img src="../common/img/gitlab.png" alt="Icono">
-    
-                        <span>GitLab</span>
-                    
-                    </div>
-                    <div class="skill">
-                        <img src="../common/img/tortoisesvn.png" alt="Icono">
-    
-                        <span>TortoiseSVN</span>
-                    
-                    </div>
-                    
+                    <div class="skill"><img src="../common/img/git.png" alt=""><span>Git</span></div>
+                    <div class="skill"><img src="../common/img/github.png" alt=""><span>GitHub</span></div>
+                    <div class="skill"><img src="../common/img/gitlab.png" alt=""><span>GitLab</span></div>
+                    <div class="skill"><img src="../common/img/tortoisesvn.png" alt=""><span>TortoiseSVN</span></div>
                 </div>
-    
-               
             </div>
         </div>
     </section>
 
-    <!-- SECCION CURRICULUM -->
-    <section id="curriculum" class="curriculum">
+    <!-- CURRICULUM -->
+    <section id="curriculum" class="curriculum reveal">
         <div class="contenido-seccion">
-            <h2>Currículum</h2>
+            <h2>Experiencia &amp; Formación</h2>
             <div class="fila">
                 <div class="col izquierda">
-                    <h3>Educación</h3>
+                    <h3>Formación</h3>
                     <div class="item izq">
-                        <h4>Master de Ingeniería en Nuevas Tecnologías en Informática</h4>
+                        <h4>Máster en Nuevas Tecnologías en Informática</h4>
                         <span class="casa">Universidad de Murcia</span>
-                        <span class="fecha">Septiembre 2022 - Julio 2024</span>
-                        <p>Obtuve mi Máster en Nuevas Tecnologías con especialización en Tecnologías del Software en la Universidad de Murcia. Este programa especializado profundiza en temas avanzados de Desarrollo de Software, con énfasis en tecnologías y metodologías de vanguardia.<br/><br/><a target="_blank" href="https://www.um.es/web/estudios/masteres/tecnologias-informatica/descripcion">Competencias adquiridas</a></p>
-                        <div class="conectori">
-                            <div class="circuloi"></div>
-                        </div>
+                        <span class="fecha">Sep 2022 — Jul 2024</span>
+                        <p>Especialización en <strong>Tecnologías del Software</strong>, con foco en sistemas distribuidos, arquitecturas cloud, metodologías modernas de desarrollo y machine learning aplicado. Tesis de Máster: un <strong>framework propio de detección y clasificación de malware en dispositivos IoT</strong>, con modelos ML/DL e inferencia en tiempo real.<br/><br/><a target="_blank" rel="noopener" href="https://www.um.es/web/estudios/masteres/tecnologias-informatica/descripcion">Detalles del programa</a></p>
                     </div>
                     <div class="item izq">
-                        <h4>Grado de Ingeniería Informática</h4>
+                        <h4>Grado en Ingeniería Informática</h4>
                         <span class="casa">Universidad de Murcia</span>
-                        <span class="fecha">Septiembre 2016 - Junio 2022</span>
-                        <p>Terminé mi Grado en Ingeniería Informática en la Universidad de Murcia. Este programa integral me proporcionó una sólida base en Informática, Desarrollo de Software y diversas áreas clave de la Tecnología. Me dotó de las habilidades esenciales necesarias para comenzar una carrera exitosa en este campo.<br/><br/><a target="_blank" href="https://www.um.es/web/estudios/grados/informatica/descripcion">Competencias adquiridas</a></p>
-                        <div class="conectori">
-                            <div class="circuloi"></div>
-                        </div>
+                        <span class="fecha">Sep 2016 — Jun 2022</span>
+                        <p>Programa integral que cubre ingeniería del software, algoritmos, estructuras de datos, redes, bases de datos y sistemas operativos. Tesis de Grado: <strong>NeuronLab</strong>, framework web para investigación con Interfaces Cerebro-Computadora no invasivas — posteriormente <strong>publicado en Elsevier</strong>.<br/><br/><a target="_blank" rel="noopener" href="https://www.um.es/web/estudios/grados/informatica/descripcion">Detalles del programa</a></p>
                     </div>
-                    
                 </div>
 
                 <div class="col derecha">
-                    <h3>Experiencia Laboral</h3>
+                    <h3>Experiencia laboral</h3>
                     <div class="item der">
                         <h4>Ingeniero Backend</h4>
-                        <span class="casa">Onebox - Ticket Distribution System</span>
-                        <span class="fecha">March 2025 - Current</span>
-                        <p><a href="https://www.oneboxtds.com/es/" target="_blank">Onebox - Ticket Distribution System</a> es una plataforma líder en soluciones de ticketing que gestiona todo el proceso de venta, distribución y validación de entradas para eventos en tiempo real.<br><br>
-
-                            Como Backend Engineer, contribuyo al desarrollo y mantenimiento de su arquitectura de microservicios en la nube, asegurando escalabilidad, rendimiento y fiabilidad en un entorno de alta demanda. Trabajo con Java 17 y Spring Boot para diseñar e implementar APIs RESTful, optimizar bases de datos relacionales (MySQL, Oracle) y NoSQL (Couchbase, Elasticsearch) y gestionar sistemas de mensajería con RabbitMQ y Apache Camel.<br><br>
-                            
-                            Además, participo en la automatización y despliegue continuo mediante Docker, Kubernetes y Jenkins, garantizando una integración eficiente y un desarrollo ágil.</p>
-                        <div class="conectord">
-                            <div class="circulod"></div>
-                        </div>
+                        <span class="casa">Onebox — Ticket Distribution System</span>
+                        <span class="fecha">Mar 2025 — Actualidad</span>
+                        <p><a href="https://www.oneboxtds.com/es/" target="_blank" rel="noopener">Onebox</a> es una plataforma líder en ticketing que gestiona venta, distribución y validación de entradas en tiempo real a gran escala.<br/><br/>
+                            Contribuyo a una <strong>arquitectura de microservicios cloud-native</strong> diseñada para escalabilidad, rendimiento y fiabilidad en un entorno de alta demanda y tiempo real. Diseño e implemento <strong>APIs REST</strong> con <strong>Java 17</strong> y <strong>Spring Boot</strong>; modelo y optimizo bases de datos relacionales (<strong>MySQL</strong>, <strong>Oracle</strong>) y NoSQL (<strong>Couchbase</strong>, <strong>Elasticsearch</strong>); e integro flujos event-driven con <strong>RabbitMQ</strong> y <strong>Apache Camel</strong>.<br/><br/>
+                            Participo en la automatización CI/CD con <strong>Docker</strong>, <strong>Kubernetes</strong> y <strong>Jenkins</strong>, además de observabilidad con <strong>Datadog</strong> y <strong>Kibana</strong>.</p>
+                        <div class="tech-tags"><span>Java 17</span><span>Spring Boot</span><span>Microservicios</span><span>Couchbase</span><span>Elasticsearch</span><span>RabbitMQ</span><span>Apache Camel</span><span>Kubernetes</span><span>Datadog</span></div>
                     </div>
                     <div class="item der">
                         <h4>Desarrollador Backend</h4>
                         <span class="casa">Orbyn</span>
-                        <span class="fecha">Enero 2024 - Febrero 2025</span>
-                        <p>En <a href="https://orbyn.com/" target="_blank">Orbyn</a>, líder en el sector fintech, participo en el diseño, desarrollo y mantenimiento de software y aplicaciones que respaldan las operaciones de la empresa. Mi rol es clave para garantizar la eficiencia, seguridad y escalabilidad de nuestros sistemas backend. Esto nos permite ofrecer servicios financieros innovadores y de alta calidad a nuestros clientes.<br/><br/>
-                            <p>Mi responsabilidad principal gira en torno a la generación de APIs y microservicios para satisfacer las diversas necesidades de nuestro negocio. Estoy activamente involucrado en el desarrollo de nuevas funcionalidades, análisis de soluciones y resolución de incidentes técnicos. Parte de mi rol también incluye la gestión de despliegues en la fase de desarrollo.</p>                        <div class="conectord">
-                            <div class="circulod"></div>
-                        </div>
+                        <span class="fecha">Ene 2024 — Feb 2025</span>
+                        <p><a href="https://orbyn.com/" target="_blank" rel="noopener">Orbyn</a> es una fintech que ofrece servicios financieros donde <strong>seguridad, disponibilidad y escalabilidad</strong> son innegociables.<br/><br/>
+                            Diseñé y desarrollé <strong>APIs y microservicios</strong> que soportan los flujos de negocio principales: desde el desarrollo de nuevas funcionalidades hasta la respuesta a incidentes y el análisis de causa raíz. Gestioné los <strong>despliegues</strong> del entorno de desarrollo, acelerando la cadencia de releases.</p>
+                        <div class="tech-tags"><span>Java</span><span>Spring Boot</span><span>Microservicios</span><span>REST APIs</span><span>Fintech</span><span>CI/CD</span></div>
                     </div>
                     <div class="item der">
-                        <h4>Desarrollador Full Stack (Beca de Investigación)</h4>
-                        <span class="casa">Universidad de Murcia</span>
-                        <span class="fecha">Julio 2022 - Diciembre 2023</span>
-                        
-                        <p>Tuve el privilegio de formar parte del <a href="https://cyberdatalab.um.es/" target="_blank">CyberDataLab</a>, un equipo dinámico y altamente motivado de científicos e investigadores dedicados a avanzar en los campos de la ciberseguridad y la ciencia de datos. Como parte de mi pasantía, desarrollé dos plataformas de software innovadoras que sirvieron como base para mis tesis de Grado y Máster, abordando desafíos en la investigación avanzada y aplicaciones prácticas.<br/><br/>
-                            Mi tesis de Grado trata sobre el desarrollo de un marco integral para apoyar el estudio de Interfaces Cerebro-Computadora (BCIs) no invasivas. Permite a los investigadores llevar a cabo diversas fases de las BCIs de manera eficiente, desde la recolección de datos hasta su análisis.<br/><br/>
-                            
-                            Mi tesis de Máster se basa en un proyecto que desarrollé por mí mismo como un marco para la detección y clasificación de malware en dispositivos IoT. El marco fue diseñado para permitir a los investigadores generar modelos sofisticados capaces de identificar y clasificar malware, así como realizar predicciones en tiempo real.</p>
-                        <div class="conectord">
-                            <div class="circulod"></div>
-                        </div>
+                        <h4>Ingeniero de Software I+D (Beca de Investigación)</h4>
+                        <span class="casa">Universidad de Murcia — CyberDataLab</span>
+                        <span class="fecha">Jul 2022 — Dic 2023</span>
+                        <p>Me incorporé al <a href="https://cyberdatalab.um.es/" target="_blank" rel="noopener">CyberDataLab</a> — grupo de investigación en ciberseguridad y ciencia de datos — y <strong>construí en solitario dos plataformas de investigación</strong> que sirvieron de base a mis tesis de Grado y Máster:<br/><br/>
+                            <strong>NeuronLab</strong> — framework web seguro y multiplataforma que cubre todas las fases del ciclo BCI, desde la adquisición de señales EEG hasta su análisis. <em>Publicado en Elsevier.</em><br/><br/>
+                            <strong>IoTDet</strong> — framework de detección y clasificación de malware para dispositivos IoT. Soporta escenarios de grabación personalizados, etiquetado de datasets con inyección de malware e inferencia en tiempo real con modelos ML/DL.</p>
+                        <div class="tech-tags"><span>Python</span><span>FastAPI</span><span>React</span><span>Node.js</span><span>ML/DL</span><span>Docker</span></div>
                     </div>
                     <div class="item der">
-                        <h4>Partner en Valkyries H2020</h4>
-                        <span class="casa">Universidad de Murcia</span>
-                        <span class="fecha">Julio 2022 - Julio 2023</span>
-                        <p>Formé parte del <a href="https://www.valkyries-h2020.eu/" target="_blank">proyecto VALKYRIES-H2020</a>, una iniciativa pionera que surgió en respuesta a los crecientes desafíos derivados de la mayor frecuencia y gravedad de los desastres naturales. Reconociendo la necesidad urgente de mejorar la resiliencia de la infraestructura, los ecosistemas y la sociedad dentro de la Unión Europea (UE), este proyecto fue concebido como un paso importante en el ámbito de la gestión del riesgo de desastres.<br/><br/>
-                            Representé a la Universidad de Murcia como socio en este proyecto, participando activamente en varios Paquetes de Trabajo e incluso asumiendo un rol de liderazgo en uno de ellos. Además, lideré diversas tareas dentro de cada Paquete de Trabajo.<br/><br/>Este proyecto me permitió participar físicamente en reuniones plenarias en Grecia e Italia.</p>
-                        <div class="conectord">
-                            <div class="circulod"></div>
-                        </div>
+                        <h4>Partner y líder de Work Package — Valkyries H2020</h4>
+                        <span class="casa">Universidad de Murcia · UE Horizon 2020</span>
+                        <span class="fecha">Jul 2022 — Jul 2023</span>
+                        <p>Participación en el proyecto europeo <a href="https://www.valkyries-h2020.eu/" target="_blank" rel="noopener">VALKYRIES-H2020</a>, financiado por la UE, sobre gestión del riesgo de desastres y resiliencia.<br/><br/>
+                            Representé a la Universidad de Murcia, <strong>lideré uno de los Work Packages</strong> del proyecto y dirigí varias tareas técnicas distribuidas entre distintos WPs. Participé presencialmente en reuniones plenarias con partners europeos en Grecia e Italia.</p>
+                        <div class="tech-tags"><span>UE H2020</span><span>Liderazgo</span><span>Documentación técnica</span></div>
                     </div>
-                    
                     <div class="item der">
                         <h4>Desarrollador Full-stack</h4>
                         <span class="casa">Metaenlace</span>
-                        <span class="fecha">Mayo 2021 - Enero 2022</span>
-                        <p>En <a href="https://metaenlace.com/" target="_blank">Metaenlace</a>, contribuí a varios proyectos importantes para el Servicio Murciano de Salud (SMS). Mi rol no solo involucró el desarrollo de aplicaciones, sino también la gestión de los despliegues de proyectos, asegurando actualizaciones sin problemas mediante la automatización con Jenkins.<br/><br/>
-                            La mayoría de los proyectos en los que trabajé contaban con una arquitectura backend robusta basada en el Spring Framework, mientras que el frontend se desarrollaba utilizando Java Server Faces y PrimeFaces, lo que refleja mi dominio de las tecnologías basadas en Java. Además, utilicé consistentemente Oracle SQL como Sistema de Gestión de Bases de Datos (DBMS) para estos proyectos.<br/><br/>
-                            
-                            Este rol me permitió fortalecer mi experiencia en desarrollo full-stack, gestión de proyectos y automatización de despliegues, mientras tenía un impacto significativo en las soluciones de atención sanitaria.</p>
-                        <div class="conectord">
-                            <div class="circulod"></div>
-                        </div>
+                        <span class="fecha">May 2021 — Ene 2022</span>
+                        <p>Desarrollo de software para el <strong>Servicio Murciano de Salud (SMS)</strong>. Implementación de funcionalidades sobre backend <strong>Spring Framework</strong> con frontend en JSF / PrimeFaces y base de datos <strong>Oracle SQL</strong> — y propietario de la automatización de despliegues mediante <strong>Jenkins</strong>.</p>
+                        <div class="tech-tags"><span>Spring</span><span>Oracle SQL</span><span>JSF</span><span>Jenkins</span><span>Healthcare</span></div>
                     </div>
                     <div class="item der">
-                        <h4>Prácticas como Full-stack Developer</h4>
+                        <h4>Prácticas de Ingeniería de Software</h4>
                         <span class="casa">Metaenlace</span>
-                        <span class="fecha">Febrero 2021 - Abril 2021</span>
-                        <p> En <a href="https://metaenlace.com/" target="_blank">Metaenlace</a>, tuve la oportunidad de participar en una enriquecedora experiencia de pasantía donde contribuí activamente al desarrollo de una aplicación web para la programación de citas médicas.<br/><br/> Este proyecto contó con un backend robusto implementado con Spring Boot y una implementación paralela utilizando .NET 5, lo que demuestra mi versatilidad en múltiples pilas tecnológicas.<br/><br/>
-                            En el frontend, utilicé el framework Angular para crear una interfaz gráfica elegante y fácil de usar. Esta experiencia me permitió obtener una experiencia práctica tanto en tecnologías backend como frontend, mejorando mis habilidades y competencia en desarrollo full-stack.<br/><br/>
-                            
-                            </p>
-                        <div class="conectord">
-                            <div class="circulod"></div>
-                        </div>
+                        <span class="fecha">Feb 2021 — Abr 2021</span>
+                        <p>Desarrollo de una aplicación web de citas médicas con backend <strong>Spring Boot</strong> (e implementación paralela en <strong>.NET 5</strong>) y frontend <strong>Angular</strong> — experiencia práctica full-stack a través de dos ecosistemas tecnológicos.</p>
+                        <div class="tech-tags"><span>Spring Boot</span><span>.NET 5</span><span>Angular</span></div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECCION PORTFOLIO -->
-    <section id="portfolio" class="portfolio">
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="portfolio reveal">
         <div class="contenido-seccion">
-            <h2>PORTFOLIO</h2>
+            <h2>Portfolio</h2>
             <div class="galeria">
 
                 <div class="proyecto">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/QIfggvPK4h0?si=AlsEwXzYEeQnHqw5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                  
+                    <iframe src="https://www.youtube.com/embed/QIfggvPK4h0?si=AlsEwXzYEeQnHqw5" title="IoTDet" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
                     <div class="overlay">
-                        <h3><a href="https://github.com/JuananMtez/IoTDet" target="_blank">IoTDet</a> <a href="https://github.com/JuananMtez/IoTDet" target="_blank"><i class="fa-brands fa-github"></i></a></h3>
-                        <p>Aplicación web para gestionar escenarios personalizados de grabación y monitoreo con dispositivos IoT. Incluye captura de datos y etiquetado con scripts de malware personalizables, detección de infecciones en tiempo real utilizando modelos de ML/DL, y un análisis de datos completo.</p>                                             
-                    </div>
-                </div>
-
-
-                <div class="proyecto">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/KYt8sd8XW30?si=9tQ87rwLy6MHGLcX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                   
-                    <div class="overlay">
-                        <h3><a href="https://github.com/JuananMtez/NeuronLab" target="_blank">NeuronLab</a> <a href="https://github.com/JuananMtez/NeuronLab" target="_blank"><i class="fa-brands fa-github"></i></a></h3>
-                        <p>Un marco seguro, multiplataforma y basado en la web que proporciona un entorno de trabajo para los investigadores, donde se puede realizar cada fase del ciclo de vida de las BCI. Además, incluye herramientas sofisticadas para estudiar las señales EEG.</p>                                             
-                    </div>
-                </div>
-                                
-                <div class="proyecto">
-                        <img src="../common/img/nodejs-icon.svg" alt="">
-                    
-                    <div class="overlay">
-                        
-                        <h3><a href="https://github.com/JuananMtez/lsl.js" target="_blank">lsl.js</a> <a href="https://github.com/JuananMtez/lsl.js" target="_blank"><i class="fa-brands fa-github"></i></a></h3>
-                        <p>Una biblioteca capaz de ejecutar el protocolo <a href="https://labstreaminglayer.org/" target="_blank">Lab Streaming Layer (LSL)</a> en Node.js.</p>                        
+                        <h3><a href="https://github.com/JuananMtez/IoTDet" target="_blank" rel="noopener">IoTDet</a> <a href="https://github.com/JuananMtez/IoTDet" target="_blank" rel="noopener" aria-label="Ver en GitHub"><i class="fa-brands fa-github"></i></a></h3>
+                        <p>Tesis de Máster. Framework de investigación para detección y clasificación de malware en dispositivos IoT: orquesta escenarios de grabación, etiquetado de datasets con inyección de malware, entrenamiento de modelos ML/DL e inferencia en tiempo real sobre telemetría real.</p>
+                        <div class="tech-tags"><span>Python</span><span>FastAPI</span><span>React</span><span>ML/DL</span><span>Docker</span></div>
                     </div>
                 </div>
 
                 <div class="proyecto">
-                    
-                    <img src="../common/img/fastapi.svg" alt="">
+                    <iframe src="https://www.youtube.com/embed/KYt8sd8XW30?si=9tQ87rwLy6MHGLcX" title="NeuronLab" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
                     <div class="overlay">
-                        <h3><a href="https://github.com/JuananMtez/ToDoTasks-AEMET-API" target="_blank">ToDoTasks And AEMET APIs</a> <a href="https://github.com/JuananMtez/ToDoTasks-AEMET-API" target="_blank"><i class="fa-brands fa-github"></i></a></h3>
-                        <p>
-                            Este proyecto consiste en crear una solución de software con servicios web y microservicios Docker. Cuenta con un punto de acceso unificado a la API REST, un microservicio de gestión de tareas y una comunicación fluida con la API de AEMET para funcionalidades relacionadas con el clima.</p>                        
+                        <h3><a href="https://github.com/JuananMtez/NeuronLab" target="_blank" rel="noopener">NeuronLab</a> <a href="https://github.com/JuananMtez/NeuronLab" target="_blank" rel="noopener" aria-label="Ver en GitHub"><i class="fa-brands fa-github"></i></a></h3>
+                        <p>Tesis de Grado — <strong>publicada en Elsevier</strong>. Framework web seguro y multiplataforma que cubre todas las fases del ciclo BCI, con herramientas avanzadas para el análisis de señales EEG.</p>
+                        <div class="tech-tags"><span>Python</span><span>FastAPI</span><span>React</span><span>EEG</span><span>Elsevier</span></div>
                     </div>
                 </div>
 
                 <div class="proyecto">
-                    
-                    <img src="../common/img/java.png" alt="">
+                    <img src="../common/img/nodejs-icon.svg" alt="lsl.js">
                     <div class="overlay">
-                        <h3><a href="https://github.com/JuananMtez/AppMusic" target="_blank">AppMusic</a> <a href="https://github.com/JuananMtez/AppMusic" target="_blank"><i class="fa-brands fa-github"></i></a></h3>
-                        <p>Una aplicación de reproductor de música offline que permite a los usuarios escuchar música de su propia biblioteca añadida manualmente. Los usuarios pueden crear listas de reproducción, explorar música y descubrir las canciones más escuchadas por todos los usuarios, así como por el usuario individual.</p>                        
+                        <h3><a href="https://github.com/JuananMtez/lsl.js" target="_blank" rel="noopener">lsl.js</a> <a href="https://github.com/JuananMtez/lsl.js" target="_blank" rel="noopener" aria-label="Ver en GitHub"><i class="fa-brands fa-github"></i></a></h3>
+                        <p>Implementación open-source del protocolo <a href="https://labstreaminglayer.org/" target="_blank" rel="noopener">Lab Streaming Layer (LSL)</a> en Node.js — permite streaming de bioseñales en tiempo real desde entornos JavaScript.</p>
+                        <div class="tech-tags"><span>Node.js</span><span>Open source</span><span>Protocolos</span></div>
                     </div>
                 </div>
 
                 <div class="proyecto">
-                    
-                    <img src="../common/img/spring.svg" alt="">
+                    <img src="../common/img/fastapi.svg" alt="ToDoTasks AEMET">
                     <div class="overlay">
-                        <h3><a href="https://github.com/JuananMtez/Word2VecApp" target="_blank">Word2VecApp</a> <a href="https://github.com/JuananMtez/Word2VecApp" target="_blank"><i class="fa-brands fa-github"></i></a></h3>
-                        <p>Sistema distribuido basado en la herramienta Word2Vec.</p>                        
+                        <h3><a href="https://github.com/JuananMtez/ToDoTasks-AEMET-API" target="_blank" rel="noopener">ToDoTasks &amp; AEMET APIs</a> <a href="https://github.com/JuananMtez/ToDoTasks-AEMET-API" target="_blank" rel="noopener" aria-label="Ver en GitHub"><i class="fa-brands fa-github"></i></a></h3>
+                        <p>Arquitectura de microservicios containerizada con un gateway REST unificado: servicio de gestión de tareas e integración con la API meteorológica de AEMET.</p>
+                        <div class="tech-tags"><span>FastAPI</span><span>Docker</span><span>Microservicios</span><span>REST</span></div>
                     </div>
                 </div>
 
-
                 <div class="proyecto">
-                    
-                    <img src="../common/img/angular.png" alt="">
+                    <img src="../common/img/java.png" alt="AppMusic">
                     <div class="overlay">
-                        <h3><a href="https://github.com/JuananMtez/Medical_Appointments_Angular" target="_blank">Medical appointments</a> <a href="https://github.com/JuananMtez/Medical_Appointments_Angular" target="_blank"><i class="fa-brands fa-github"></i></a></h3>
-                        <p>Una aplicación con interfaz gráfica para la creación de citas médicas.</p>                        
-                    </div>
-                </div>
-                <div class="proyecto">
-                    
-                    <img src="../common/img/csharp.svg" alt="">
-                    <div class="overlay">
-                        <h3><a href="https://github.com/JuananMtez/Medical_Appointments_.Net5" target="_blank">Medical appointments</a> <a href="https://github.com/JuananMtez/Medical_Appointments_.Net5" target="_blank"><i class="fa-brands fa-github"></i></a></h3>
-                        <p>Una API para la creación de citas médicas utilizando .NET 5.</p>                        
-                    </div>
-                </div>
-                <div class="proyecto">
-                    
-                    <img src="../common/img/spring.svg" alt="">
-                    <div class="overlay">
-                        <h3><a href="https://github.com/JuananMtez/Medical_Appointments_SpringBoot" target="_blank">Medical appointments</a> <a href="https://github.com/JuananMtez/Medical_Appointments_SpringBoot" target="_blank"><i class="fa-brands fa-github"></i></a></h3>
-                        <p>Una API para la creación de citas médicas utilizando SpringBoot.</p>                        
-                    </div>
-                </div>
-                <div class="proyecto">
-                    
-                    <img src="../common/img/android.png" alt="">
-                    <div class="overlay">
-                        <h3><a href="https://github.com/JuananMtez/Umu-Network-Cell-Info" target="_blank">UMU Network Cell Info</a> <a href="https://github.com/JuananMtez/Umu-Network-Cell-Info" target="_blank"><i class="fa-brands fa-github"></i></a></h3>
-                        <p>Una aplicación Android que proporciona los niveles de señal de red para 2G (GSM), WCDMA (3G) y LTE (4G) en la ubicación del usuario. Además, la aplicación puede mostrar la torre específica a la que está conectado el teléfono móvil del usuario.</p>                        
+                        <h3><a href="https://github.com/JuananMtez/AppMusic" target="_blank" rel="noopener">AppMusic</a> <a href="https://github.com/JuananMtez/AppMusic" target="_blank" rel="noopener" aria-label="Ver en GitHub"><i class="fa-brands fa-github"></i></a></h3>
+                        <p>Reproductor de música offline en Java. Gestión de biblioteca local, creación de playlists y estadísticas de reproducción globales y por usuario.</p>
+                        <div class="tech-tags"><span>Java</span><span>Swing</span><span>OOP</span></div>
                     </div>
                 </div>
 
+                <div class="proyecto">
+                    <img src="../common/img/spring.svg" alt="Word2Vec">
+                    <div class="overlay">
+                        <h3><a href="https://github.com/JuananMtez/Word2VecApp" target="_blank" rel="noopener">Word2VecApp</a> <a href="https://github.com/JuananMtez/Word2VecApp" target="_blank" rel="noopener" aria-label="Ver en GitHub"><i class="fa-brands fa-github"></i></a></h3>
+                        <p>Sistema distribuido que utiliza el modelo Word2Vec para calcular similitudes semánticas entre palabras a través de varios nodos.</p>
+                        <div class="tech-tags"><span>Spring Boot</span><span>Distribuido</span><span>NLP</span></div>
+                    </div>
+                </div>
 
                 <div class="proyecto">
-                    <img src="../common/img/aws3.png" alt="">
-                <div class="overlay">
-                    
-                    <h3><a href="https://github.com/JuananMtez/OMDb-API-Replica" target="_blank">OMDb API replica</a> <a href="https://github.com/JuananMtez/OMDb-API-Replica" target="_blank"><i class="fa-brands fa-github"></i></a></h3>
-                    <p>Un sitio web que hace uso de la API OMDb para recuperar la información relacionada con las películas. Ha sido desarrollado utilizando servicios de AWS (S3, API Gateway, Lambda, DynamoDB e IAM) y Boto3 (AWS SDK para Python).</p>                </div>
-            </div>
+                    <img src="../common/img/angular.png" alt="Citas médicas Angular">
+                    <div class="overlay">
+                        <h3><a href="https://github.com/JuananMtez/Medical_Appointments_Angular" target="_blank" rel="noopener">Citas médicas — Angular</a> <a href="https://github.com/JuananMtez/Medical_Appointments_Angular" target="_blank" rel="noopener" aria-label="Ver en GitHub"><i class="fa-brands fa-github"></i></a></h3>
+                        <p>SPA en Angular para gestión de citas médicas — frontend complementario a los backends de Spring Boot y .NET.</p>
+                        <div class="tech-tags"><span>Angular</span><span>TypeScript</span><span>SPA</span></div>
+                    </div>
+                </div>
+
+                <div class="proyecto">
+                    <img src="../common/img/csharp.svg" alt="Citas médicas .NET">
+                    <div class="overlay">
+                        <h3><a href="https://github.com/JuananMtez/Medical_Appointments_.Net5" target="_blank" rel="noopener">Citas médicas — .NET 5</a> <a href="https://github.com/JuananMtez/Medical_Appointments_.Net5" target="_blank" rel="noopener" aria-label="Ver en GitHub"><i class="fa-brands fa-github"></i></a></h3>
+                        <p>API REST para el dominio de citas médicas implementada en C# / .NET 5 — implementación paralela a la versión Spring Boot.</p>
+                        <div class="tech-tags"><span>C#</span><span>.NET 5</span><span>REST API</span></div>
+                    </div>
+                </div>
+
+                <div class="proyecto">
+                    <img src="../common/img/spring.svg" alt="Citas médicas Spring">
+                    <div class="overlay">
+                        <h3><a href="https://github.com/JuananMtez/Medical_Appointments_SpringBoot" target="_blank" rel="noopener">Citas médicas — Spring Boot</a> <a href="https://github.com/JuananMtez/Medical_Appointments_SpringBoot" target="_blank" rel="noopener" aria-label="Ver en GitHub"><i class="fa-brands fa-github"></i></a></h3>
+                        <p>API REST para el dominio de citas médicas implementada con Spring Boot, JPA y backend relacional.</p>
+                        <div class="tech-tags"><span>Java</span><span>Spring Boot</span><span>JPA</span><span>REST API</span></div>
+                    </div>
+                </div>
+
+                <div class="proyecto">
+                    <img src="../common/img/android.png" alt="UMU Network Cell Info">
+                    <div class="overlay">
+                        <h3><a href="https://github.com/JuananMtez/Umu-Network-Cell-Info" target="_blank" rel="noopener">UMU Network Cell Info</a> <a href="https://github.com/JuananMtez/Umu-Network-Cell-Info" target="_blank" rel="noopener" aria-label="Ver en GitHub"><i class="fa-brands fa-github"></i></a></h3>
+                        <p>App Android que reporta los niveles de señal 2G (GSM), 3G (WCDMA) y 4G (LTE) e identifica la torre específica a la que está conectado el dispositivo.</p>
+                        <div class="tech-tags"><span>Android</span><span>Kotlin</span><span>Mobile</span></div>
+                    </div>
+                </div>
+
+                <div class="proyecto">
+                    <img src="../common/img/aws3.png" alt="OMDb API replica">
+                    <div class="overlay">
+                        <h3><a href="https://github.com/JuananMtez/OMDb-API-Replica" target="_blank" rel="noopener">OMDb API Replica</a> <a href="https://github.com/JuananMtez/OMDb-API-Replica" target="_blank" rel="noopener" aria-label="Ver en GitHub"><i class="fa-brands fa-github"></i></a></h3>
+                        <p>Réplica serverless de la API OMDb sobre AWS — S3, API Gateway, Lambda, DynamoDB e IAM, scripted con Boto3.</p>
+                        <div class="tech-tags"><span>AWS Lambda</span><span>DynamoDB</span><span>API Gateway</span><span>Serverless</span></div>
+                    </div>
+                </div>
 
             </div>
         </div>
     </section>
 
-    <!--SECCION PUBLICACIONES-->
-    <section id="publication" class="publicacion">
+    <!-- PUBLICACIONES -->
+    <section id="publication" class="publicacion reveal">
         <div class="contenido-seccion">
             <h2>Publicaciones</h2>
             <div class="galeria">
                 <div class="proyecto">
-                    
-                    <img src="../common/img/elsevier.png" alt="" style="background-color: white;">
+                    <img src="../common/img/elsevier.png" alt="Elsevier">
                     <div class="overlay">
-                        <h3><a href="../common/pdf/neuronlab.pdf" target="_blank">NeuronLab: BCI framework for the study of biosignals</a></h3>
-                    </div>
-                </div>                
-                
-            </div>
-        </div>
-        </section>
-
-        <!--SECCION CERTIFICACIONES-->
-        <section id="certification" class="certificacion">
-            <div class="contenido-seccion">
-                <h2>Certificaciones</h2>
-                <div class="galeria">
-                    <div class="proyecto">
-                        
-                        <img src="../common/img/confluent.jpg" alt="">
-                        <div class="overlay">
-                            <h3><a href="https://certificates.confluent.io/fe97c902-c46f-4cf1-aead-4e4c164ef2c8#acc.y3Ipmvxf" target="_blank">Confluent Fundamentals Accreditation - Apache Kafka</a></h3>
-                            <p style="font-style: italic;">Obtenido: 13 Dec 2024</p>
-                            </a></p>
-                        </div>
-                    </div>
-                    <div class="proyecto">
-                        
-                        <img src="../common/img/babbel.jpg" alt="">
-                        <div class="overlay">
-                            <h3><a href="../common/pdf/english_babbel.pdf" target="_blank">Curso de Inglés B2.1</a></h3>
-                            <p style="font-style: italic;">Obtenido: 23 Nov 2024</p>
-                            </a></p>
-                        </div>
-                    </div>
-                    <div class="proyecto">
-                        
-                        <img src="../common/img/umu.jpg" alt="">
-                        <div class="overlay">
-                            <h3><a href="../common/pdf/aleman_umu.pdf" target="_blank">Curso de Alemán A1.1</a></h3>
-                            <p style="font-style: italic;">Obtenido: 28 Jul 2021</p>
-                            </a></p>
-                        </div>
-                    </div>
-                    <div class="proyecto">
-                        
-                        <img src="../common/img/busuu.png" alt="">
-                        <div class="overlay">
-                            <h3><a href="../common/pdf/aleman_busuu.pdf" target="_blank">Curso de Alemán A1</a></h3>
-                            <p style="font-style: italic;">Obtenido: 21 Jun 2022</p>
-                            </a></p>
-                        </div>
-                    </div>
-                    
-                    
-                </div>
-            </div>
-            </section>
-        
-    <!-- SECCION CONTACTO -->
-    <section id="contact" class="contacto">
-        <div class="contenido-seccion">
-            <h2>Contacto</h2>
-            <div class="fila">
-                <!-- Formulario -->
-                <div class="col">
-                    <input type="text" id="name" placeholder="Tu nombre">
-                    <input type="text" id="phone" placeholder="Teléfono móvil">
-                    <input type="text" id="email" placeholder="E-mail">
-                    
-                    <textarea id="message" cols="30" rows="10" placeholder="Mensaje"></textarea>
-                    <button  type="button" onclick="sendEmail()">
-                        Enviar <i class="fa-solid fa-paper-plane"></i>
-                        <span class="overlay"></span>
-                    </button>
-                </div>
-                <!-- Mapa -->
-                <div class="col">
-                    <img style="border-radius: 28px;" src="../common/img/ubicacion.png" alt="">
-                    <div class="info">
-                        <ul>
-                            <li>
-                                <i class="fa-solid fa-location-dot"></i>Murcia, España
-                            </li>
-                            
-                            <li>
-                                <i class="fa-solid fa-envelope"></i>martinezlopezjuanantonio@gmail.com
-                            </li>
-                        </ul>
+                        <h3><a href="../common/pdf/neuronlab.pdf" target="_blank" rel="noopener">NeuronLab: BCI framework for the study of biosignals</a></h3>
                     </div>
                 </div>
-                
             </div>
         </div>
     </section>
 
-    <!-- footer -->
+    <!-- CERTIFICACIONES -->
+    <section id="certification" class="certificacion reveal">
+        <div class="contenido-seccion">
+            <h2>Certificaciones</h2>
+            <div class="galeria">
+                <div class="proyecto">
+                    <img src="../common/img/confluent.jpg" alt="Confluent">
+                    <div class="overlay">
+                        <h3><a href="https://certificates.confluent.io/fe97c902-c46f-4cf1-aead-4e4c164ef2c8#acc.y3Ipmvxf" target="_blank" rel="noopener">Confluent Fundamentals — Apache Kafka</a></h3>
+                        <p>Obtenido: 13 Dic 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contact" class="contacto reveal">
+        <div class="contenido-seccion">
+            <h2>Contacto</h2>
+            <div class="fila">
+                <div class="col">
+                    <input type="text" id="name" placeholder="Tu nombre" autocomplete="name">
+                    <input type="tel" id="phone" placeholder="Teléfono móvil (opcional)" autocomplete="tel">
+                    <input type="email" id="email" placeholder="E-mail" autocomplete="email">
+                    <textarea id="message" rows="6" placeholder="Mensaje"></textarea>
+                    <button type="button" onclick="sendEmail()">
+                        Enviar mensaje <i class="fa-solid fa-paper-plane"></i>
+                        <span class="overlay"></span>
+                    </button>
+                    <div id="form-status" class="form-status" aria-live="polite"></div>
+                </div>
+                <div class="col">
+                    <img src="../common/img/ubicacion.png" alt="Mapa de Murcia">
+                    <div class="info">
+                        <ul>
+                            <li><i class="fa-solid fa-location-dot"></i> Murcia, España</li>
+                            <li><i class="fa-solid fa-envelope"></i> martinezlopezjuanantonio@gmail.com</li>
+                            <li><i class="fa-brands fa-linkedin-in"></i> <a href="https://www.linkedin.com/in/juanantonio-martinez/" target="_blank" rel="noopener">linkedin.com/in/juanantonio-martinez</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-        <a href="#home" class="arriba">
+        <a href="#home" class="arriba" aria-label="Volver arriba">
             <i class="fa-solid fa-angles-up"></i>
         </a>
         <div class="redes">
-            <a href="https://www.linkedin.com/in/juanantonio-martinez/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://github.com/JuananMtez" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="https://stackoverflow.com/users/19906802/juan-antonio-martinez-lopez" target="_blank"><i class="fa-brands fa-stack-overflow"></i></a>
-
+            <a href="https://www.linkedin.com/in/juanantonio-martinez/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/JuananMtez" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://stackoverflow.com/users/19906802/juan-antonio-martinez-lopez" target="_blank" rel="noopener" aria-label="Stack Overflow"><i class="fa-brands fa-stack-overflow"></i></a>
         </div>
-        <p>Copyright 2025. Todos los derechos reservados.</p>
+        <p>© 2025 Juan Antonio Martínez López — Todos los derechos reservados.</p>
     </footer>
 
-    <script src="../common/script.js"></script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="../common/script.js"></script>
 </body>
 </html>
